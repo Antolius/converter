@@ -17,6 +17,7 @@ class InputFormComponent extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    this.props.onSubmit(this.state);
   }
 
   handleInput = (event) => {
@@ -62,7 +63,9 @@ class InputFormComponent extends React.Component {
 InputFormComponent.displayName = 'InputFormComponent';
 
 // Uncomment properties you need
-// InputFormComponent.propTypes = {};
+InputFormComponent.propTypes = {
+  onSubmit: React.PropTypes.func.isRequired
+};
 // InputFormComponent.defaultProps = {};
 
 export default InputFormComponent;
