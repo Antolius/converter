@@ -1,7 +1,5 @@
-require('normalize.css/normalize.css');
-require('styles/App.css');
-
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 let yeomanImage = require('../images/yeoman.png');
 
