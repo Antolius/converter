@@ -15,7 +15,11 @@ class PickerComponent extends React.Component {
 
   render() {
     return (
-      <select className='form-control  ml-2'>
+      <select className='form-control  ml-2'
+        id={this.props.id}
+        value={this.props.value}
+        onChange={this.props.onChange}
+      >
         {this.renderOptions()}
       </select>
     );
@@ -25,7 +29,11 @@ class PickerComponent extends React.Component {
 PickerComponent.displayName = 'PickerComponent';
 
 // Uncomment properties you need
-// PickerComponent.propTypes = {};
+PickerComponent.propTypes = {
+  id: React.PropTypes.string,
+  value: React.PropTypes.oneOf(config.currencies),
+  onChange: React.PropTypes.func
+};
 // PickerComponent.defaultProps = {};
 
 export default PickerComponent;
