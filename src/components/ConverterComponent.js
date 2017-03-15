@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import InputFormComponent from './InputFormComponent';
 
 class ConverterComponent extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class ConverterComponent extends React.Component {
     return (
       <div className='converter-component'>
          <h5>Conversion details</h5>
-         <form />
+         <InputFormComponent />
          <h5>Conversion result</h5>
          <p>{result}</p>
       </div>
