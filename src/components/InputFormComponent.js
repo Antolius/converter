@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import PickerComponent from './PickerComponent';
 
 class InputFormComponent extends React.Component {
 
@@ -17,19 +18,11 @@ class InputFormComponent extends React.Component {
         </div>
         <div className='form-group mr-4'>
           <label htmlFor='from'>From</label>
-          <select id='from' className='form-control  ml-2'>
-            <option>EUR</option>
-            <option>HRK</option>
-            <option>USD</option>
-          </select>
+          <PickerComponent />
         </div>
         <div className='form-group mr-4'>
           <label htmlFor='to'>To</label>
-          <select id='to' className='form-control  ml-2'>
-            <option>EUR</option>
-            <option>HRK</option>
-            <option>USD</option>
-          </select>
+          <PickerComponent />
         </div>
         <button type='submit' className='btn btn-primary'>CONVERT!</button>
       </form>
