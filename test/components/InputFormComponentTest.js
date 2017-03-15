@@ -17,6 +17,6 @@ describe('InputFormComponent', () => {
   });
 
   it('should have its component name as default className', () => {
-    expect(component.props.className).to.equal('inputform-component');
+    expect(component.props.className).to.contain('inputform-component');
   });
 });

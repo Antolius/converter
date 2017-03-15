@@ -13,10 +13,16 @@ describe('PickerComponent', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(PickerComponent);
+    component = createComponent(PickerComponent, {id: 'myId'});
   });
 
-  it('should have its component name as default className', () => {
-    expect(component.props.className).to.equal('picker-component');
+  it('should use id from props', () => {
+    expect(component.props.id).to.equal('myId');
   });
+  
+  it('should have 32 options to pick from', () => {
+    const options = component.props.children;
+    expect(options).to.have.lengthOf(32);
+  });
+
 });
